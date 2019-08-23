@@ -17,7 +17,7 @@ $(document).ready(function(){
     // if (inputNumber > 0) {
     //     return inputNumber
     // }
-    for (let i = 0; i >= inputNumber.length; i -- ) { //inputNumberReturns
+    for (let i = inputNumber; i <= inputNumber.length; i-- ) { //inputNumberReturns
     // // let i = inputNumber;
         console.log(inputNumber[i]);
 
