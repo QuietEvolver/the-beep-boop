@@ -9,17 +9,23 @@ $(document).ready(function(){
 
     console.log("fxn-inner");
     let inputNumber = [];
-    inputNumber = parseInt($("input#input-number").val());//spec#1
+    inputNumber = parseInt($("#input-number").val());//spec#1
         console.log("Submit button Event function: Input",inputNumber);
-        let i; 
-        for (i = 0; i > inputNumber.length; i--) {
-            const inputNumberRangeReturn = inputNumber[i];
-            console.log(inputNumberRangeReturn);
-            return inputNumberRangeReturn;
+        for ( let i = 0; i <= inputNumber.length; i++) {
+            inputNumber[i];
+            console.log(i);
+            return i;
         };
-        $("#input-number-range-return")
-        $("#result").text(`<li>`+inputNumber, inputNumberRangeReturn);
-        console.log("fxn-outer");
+
+        // Attempting to dynamically populate the .html output:
+        // let inputsAndOutputs = ["input-number","input-number-range-return"];
+        // inputsAndOutputs.forEach(inputAndOutput => {
+        //     let generatedIntegers = 
+        // });
+        // $("#result").text(inputsAndOutputs);
+
+        $("#result").text();
         event.preventDefault();
     });
+    console.log("fxn-outer");
 });
