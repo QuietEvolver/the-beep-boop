@@ -6,16 +6,13 @@ Output: "0, 1, 2, 3, 4"
 
 $(document).ready(function(){
    $("form").submit(function(event){
-
     console.log("fxn-inner");
-    let inputNumber = [];
-    inputNumber = parseInt($("#input-number").val());//spec#1
-        console.log("Submit button Event function: Input",inputNumber);
-        for ( let i = 0; i <= inputNumber.length; i++) {
-            inputNumber[i];
-            console.log(i);
-            return i;
-        };
+    let inputNumber = parseInt($("#input-number").val());//spec#1
+           console.log("Submit button Event function: Input",inputNumber);
+    for ( let i = 0; i < inputNumber.length; i++) {
+        console.log("inside loop:", inputNumber.i);
+        text += i;
+    };
 
         // Attempting to dynamically populate the .html output:
         // let inputsAndOutputs = ["input-number","input-number-range-return"];
@@ -24,7 +21,7 @@ $(document).ready(function(){
         // });
         // $("#result").text(inputsAndOutputs);
 
-        $("#result").text();
+       // $("#result").text();
         event.preventDefault();
     });
     console.log("fxn-outer");
