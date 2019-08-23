@@ -4,9 +4,12 @@ Input: "4"
 Output: "0, 1, 2, 3, 4"
 */
 
-(document).ready(function(){
+$(document).ready(function(){
+    let beepBoop = $("form").submit(function(){
     event.preventDefault();
-    ("form").submit(function(){
-        //spec#1
+    let inputNumber = parseInt($("#input-number").val());//spec#1
+        console.log("Submit button Event function: Input",inputNumber);
     });
+    $("#result").beepBoop;
+    console.log("fxn-outer");
 });
