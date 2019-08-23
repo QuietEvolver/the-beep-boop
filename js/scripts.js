@@ -5,11 +5,14 @@ Output: "0, 1, 2, 3, 4"
 */
 
 $(document).ready(function(){
-    let beepBoop = $("form").submit(function(){
-    event.preventDefault();
-    let inputNumber = parseInt($("#input-number").val());//spec#1
+   $("form").submit(function(event){
+
+    console.log("fxn-inner");
+    let inputNumber = parseInt($("input#input-number").val());//spec#1
         console.log("Submit button Event function: Input",inputNumber);
+    
+        $("#result").text(inputNumber);
+        console.log("fxn-outer");
+        event.preventDefault();
     });
-    $("#result").beepBoop;
-    console.log("fxn-outer");
 });
