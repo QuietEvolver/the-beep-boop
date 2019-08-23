@@ -18,10 +18,12 @@ $(document).ready(function(){
     //     return inputNumber
     // }
 
-        for (let count = 0; ; count ++){
-            console.log(count + inputNumber);
+        for (let count = 0; count <= inputNumber.length; count ++){
                 if (count === inputNumber);
-                return;
+                console.log("Inside for loop!", count + inputNumber);
+                return count;
+                //return inputNumber + count; //this works to return input only; 
+                //why did this not work: return inputNumber(count);
         }
   
     // try 57: for (let i = inputNumber; i <= inputNumber.length; i-- ) { //inputNumberReturns
