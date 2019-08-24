@@ -13,8 +13,8 @@ $(document).ready(function(){
 
         for (let count = 0; ; count ++){
             console.log("Inside for loop!", count + inputNumber);
-                if (count === inputNumber);
-                return inputNumber + count; //this works; 
+                if (count <= inputNumber.length);
+                return result = $("#result").text(inputNumber); //this works; 
                 //why did this not work: return inputNumber(count);
               }
         return result = $("#result").text(inputNumber);
