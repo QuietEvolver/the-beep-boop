@@ -23,7 +23,8 @@ $(document).ready(function(){
     for (let i = 0; i <= inputNumber; i++){ //4to1ie.  for (let i = inputNumber; i >= 0; i--){ 
         console.log("Inside for loop!", i);
         //function created below to capure each i and fxn does the core work;
-        selectOutput(i);
+        let output =  selectOutput(i);
+        console.log(output);
         //spec#3 finds the exception 1="Beep!"
         if (i === inputNumber){ 
             //removes the comma at end of i loop
@@ -56,7 +57,18 @@ function selectOutput(num) {
                 //reassigning the valNumImportance for comparison/weighing.
                 valNumImportance = nArrNum;
                 console.log("value Number Importance to be assigned output", valNumImportance)
+                if (valNumImportance === 3) {
+                    return "I'm sorry, Dave. I'm afraid I can't do that.";
+                }
+                //after we save valofImportc return the output. if <3, must go out of for loop b/c it's done(highest it can go); & Check what we need to output bvased on  val of Importce.
             }
         }
+    }
+    if (valNumImportance ===1){
+        return "Beep!"
+    } else if (valNumImportance === 2){
+        return "Boop!"
+    } else {
+        return num;
     }
 }
