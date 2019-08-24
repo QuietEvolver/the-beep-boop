@@ -28,11 +28,12 @@ $(document).ready(function(){
         //spec#3 finds the exception 1="Beep!"
         if (i === inputNumber){ 
             //removes the comma at end of i loop
-            outputString += (i);
+            //replace i iteration w output captured values housing all evaluations of i at each iteration equaling the outcome list string.
+            outputString += (output);
         } 
         else{ 
             // strings in order
-            outputString += (i+ "\,");
+            outputString += (output+ "\,");
         }
         console.log(outputString);            
         }     
@@ -64,7 +65,7 @@ function selectOutput(num) {
             }
         }
     }
-    if (valNumImportance ===1){
+    if (valNumImportance === 1){
         return "Beep!"
     } else if (valNumImportance === 2){
         return "Boop!"
