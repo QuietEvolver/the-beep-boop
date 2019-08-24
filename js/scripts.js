@@ -11,6 +11,7 @@ hint: start w empty str.  concat each num to said string. look at ie.  run code;
 
 $(document).ready(function(){
    $("form").submit(function(event){
+    event.preventDefault();
     console.log("fxn-inner");
     //spec#1
     let inputNumber = parseInt($("#input-number").val());
@@ -37,6 +38,10 @@ $(document).ready(function(){
         }
         console.log(outputString);            
         }     
+
+    //call id to display output
+    //shows all on html; just one line!
+    $("#result").text(outputString);    
     });
     console.log("fxn-outer");
 });
