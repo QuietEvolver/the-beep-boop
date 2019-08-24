@@ -43,12 +43,20 @@ $(document).ready(function(){
 function selectOutput(num) {
     let n = num.toString();
     let nArr = n.split('');
+    //creating var for overwrite by 1,2,3; starting at 0 b/c we must start at 1 for importance of NumVal '1,2,3'aka"Beep!","boop", "dave" b/c Zero is Less Than (or =) 1 (per my logic)
+    let valNumImportance = 0;
     //how do I get a number out of an array??
     for (let i=0; i < nArr.length; i++) {
         //already have the i = looped nums; change the arr of string Obj to int arr.
         //getting 1 num at a time from 0 to original ceiling.
         let nArrNum = parseInt(nArr[i]);
         console.log(nArrNum);
-        //if (nArr[i]
+        if((nArrNum === 1)||(nArrNum === 2)||(nArrNum === 3)) {
+            if( nArrNum > valNumImportance){
+                //reassigning the valNumImportance for comparison/weighing.
+                valNumImportance = nArrNum;
+                console.log("value Number Importance to be assigned output", valNumImportance)
+            }
+        }
     }
 }
