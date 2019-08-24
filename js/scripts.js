@@ -22,7 +22,8 @@ $(document).ready(function(){
     //spec #2
     for (let i = 0; i <= inputNumber; i++){ //4to1ie.  for (let i = inputNumber; i >= 0; i--){ 
         console.log("Inside for loop!", i);
-            //why did this not work: return inputNumber(count);
+        //function created below to capure each i and fxn does the core work;
+        selectOutput(i);
         //spec#3 finds the exception 1="Beep!"
         if (i === inputNumber){ 
             //removes the comma at end of i loop
@@ -32,24 +33,22 @@ $(document).ready(function(){
             // strings in order
             outputString += (i+ "\,");
         }
-        console.log(outputString);
-        //if (i===1){ 
-            // let one = 1;
-            // one = "Beep!"
-   //  attempt 1       console.log("Displaying the js literal string notation-?", i.replace(1 , "(`\"Beep\!\"\, `)"));
-       //  att2  console.log(`The number "${one}" ${i.includes(one)? 'is' : 'is not'} in the output`);
-       // att3  
-    //    var re = /(\w+)\1(\w+)/;
-    //         var str = `\"Beep\!\"\, `;
-    //         var newstr = str.replace(re, '$2, $1');
-    //     console.log(newstr);  // Smith, John
-
-            
-        //spec 3.a: Else, display all; else {
-            
-        }  
-    
-              
+        console.log(outputString);            
+        }     
     });
     console.log("fxn-outer");
 });
+//create a fxn to take in the output.split
+//number is a keyword so must type "num" for arg in JS
+function selectOutput(num) {
+    let n = num.toString();
+    let nArr = n.split('');
+    //how do I get a number out of an array??
+    for (let i=0; i < nArr.length; i++) {
+        //already have the i = looped nums; change the arr of string Obj to int arr.
+        //getting 1 num at a time from 0 to original ceiling.
+        let nArrNum = parseInt(nArr[i]);
+        console.log(nArrNum);
+        //if (nArr[i]
+    }
+}
